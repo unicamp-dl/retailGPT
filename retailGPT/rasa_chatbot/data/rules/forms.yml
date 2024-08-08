@@ -1,0 +1,72 @@
+  version: "3.1"
+
+  rules:
+
+    - rule: Asks the user to fill the form first if the user tries to start a conversation inside the zipcode_form
+      condition:
+        - active_loop: zipcode_form
+      steps:
+      - intent: conversation
+      - action: llm_processing
+
+    - rule: Activate zipcode form
+      condition:
+        - active_loop: null
+        - slot_was_set:
+          - zipcode: null
+          - legal_age: null
+      steps:
+      - intent: greet
+      - action: utter_greet
+      - action: zipcode_form
+      - active_loop: zipcode_form
+
+    - rule: Submit the zipcode form
+      condition:
+        - active_loop: zipcode_form
+      steps:
+        - action: zipcode_form
+        - active_loop: null
+        - action: process_cached_user_demands
+
+    - rule: Transition from zipcode form to payment form
+      condition:
+      - active_loop: zipcode_form
+      - slot_was_set:
+        - payment_method: "set"
+      steps:
+      - action: zipcode_form
+      - active_loop: null
+      - slot_was_set:
+        - requested_slot: null
+      - action: payment_method_form
+      - active_loop: payment_method_form
+
+    - rule: Start Payment Form
+      condition:
+      - active_loop: null
+      - slot_was_set:
+        - zipcode: "set"
+      steps:
+        - intent: finish_purchase
+        - action: payment_method_form
+        - active_loop: payment_method_form
+
+    - rule: Transition from payment form to confirmation form
+      steps:
+        - action: payment_method_form
+        - active_loop: payment_method_form
+        - active_loop: null
+        - action: summarize_details
+        - action: confirmation_form
+        - slot_was_set:
+          - modify_details: null
+
+    - rule: Trigger correct_detail based on slot after confirmation_form
+      steps:
+        - action: confirmation_form
+        - active_loop: confirmation_form
+        - active_loop: null
+        - slot_was_set:
+          - modify_details: "set"
+        - action: correct_detail

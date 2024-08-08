@@ -1,0 +1,142 @@
+version: '3.1'
+forms:
+  zipcode_form:
+    required_slots:
+    - legal_age
+    - zipcode
+  payment_method_form:
+    required_slots:
+    - payment_method
+  confirmation_form:
+    required_slots:
+    - modify_details
+entities:
+- payment_method
+- zipcode
+- modify_details
+slots:
+  zipcode:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: zipcode
+      conditions:
+      - active_loop: zipcode_form
+        requested_slot: zipcode
+  legal_age:
+    type: bool
+    mappings:
+    - type: from_intent
+      intent: affirm
+      value: true
+      conditions:
+      - active_loop: zipcode_form
+        requested_slot: legal_age
+    - type: from_intent
+      intent: deny
+      value: false
+      conditions:
+      - active_loop: zipcode_form
+        requested_slot: legal_age
+  payment_method:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: payment_method
+      conditions:
+      - active_loop: payment_method_form
+        requested_slot: payment_method
+  modify_details:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: modify_details
+      conditions:
+      - active_loop: confirmation_form
+        requested_slot: modify_details
+intents:
+- affirm
+- bot_challenge
+- conversation
+- deny
+- finish_purchase
+- goodbye
+- greet
+- inform
+- inform_zipcode
+- nlu_fallback
+- cart_status
+actions:
+- utter_greet
+- utter_goodbye
+- correct_detail
+- llm_processing
+- process_cached_user_demands
+- summarize_details
+- validate_zipcode_form
+- validate_payment_method_form
+- validate_confirmation_form
+- action_default_fallback
+- return_cart_status
+responses:
+  utter_greet:
+  - text: |
+      Hey there! Welcome to RetailGPT, your personal shopping assistant! I'm here to help you create your cart and recommend products. The process is simple: just let me know what you're looking for, and I'll guide you through selecting the best products from our store. Ready to get started?
+  utter_goodbye:
+  - text: See you later! 👋🏼 If you need anything, we're here!
+  utter_iamabot:
+  - text: Yes, I am a virtual assistant. How can I help you?
+  utter_ask_legal_age:
+  - text: |
+      Before we start, I just need to confirm some information. 🍻 Are you of legal age?
+    buttons:
+    - title: Yes, I declare that I am of legal age.
+      payload: /affirm
+    - title: I am still under legal age.
+      payload: /deny
+  utter_ask_zipcode:
+  - text: Now tell me, what's your ZIP code?
+  - text: Please give me your ZIP code.
+  - text: I need your ZIP code to continue. Can you provide it?
+  - text: Please inform your ZIP code.
+  utter_submit_zipcode:
+  - text: Noted! 📝 Now just tell me what you want and place your order.
+  utter_submit_payment:
+  - text: Noted! 📝 Now just wait for your order to arrive at your home!
+  utter_slots_values:
+  - text: |-
+      You provided:
+       - ZIP code: {zipcode}
+       - Is of legal age: {legal_age}
+  utter_please_rephrase:
+  - text: Sorry, I didn't understand. Can you rephrase?
+  - text: I didn't understand. Can you say it differently?
+  utter_zipcode_form_warning:
+  - text: Before assisting you, I need you to answer the questions I asked, please.
+  - text: Before we continue, I need you to answer the questions I asked, please.
+  utter_ask_payment_method:
+  - text: 'Choose your payment method:'
+    buttons:
+    - title: Cash
+      payload: /inform{{"payment_method":"Cash"}}
+    - title: Credit
+      payload: /inform{{"payment_method":"Credit"}}
+    - title: Debit
+      payload: /inform{{"payment_method":"Debit"}}
+  utter_ask_modify_details:
+  - text: ''
+    buttons:
+    - title: Change ZIP code
+      payload: /inform{{"modify_details":"zipcode"}}
+    - title: Change payment method
+      payload: /inform{{"modify_details":"payment_method"}}
+    - title: Change the order
+      payload: /inform{{"modify_details":"cart"}}
+    - title: Everything is correct!
+      payload: /inform{{"modify_details":"ok"}}
+  utter_default:
+  - text: Sorry, I didn't understand. Please say it differently.
+  - text: I didn't understand. Please rephrase.
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

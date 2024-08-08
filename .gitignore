@@ -1,0 +1,5 @@
+.rasa
+__pycache__
+models/
+secrets.yml
+**/.env

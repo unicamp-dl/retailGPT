@@ -1,0 +1,274 @@
+{
+  "products": [
+    {
+      "row_id": 1,
+      "product_name": "Coca-Cola 2L",
+      "product_volume_in_hectoliters": 0.006,
+      "full_price": 5.99
+    },
+    {
+      "row_id": 2,
+      "product_name": "Pepsi 1L",
+      "product_volume_in_hectoliters": 0.01,
+      "full_price": 8.49
+    },
+    {
+      "row_id": 3,
+      "product_name": "Sprite 350ml",
+      "product_volume_in_hectoliters": 0.0035,
+      "full_price": 2.49
+    },
+    {
+      "row_id": 4,
+      "product_name": "Heineken 600ml",
+      "product_volume_in_hectoliters": 0.006,
+      "full_price": 6.29
+    },
+    {
+      "row_id": 5,
+      "product_name": "Budweiser 600ml",
+      "product_volume_in_hectoliters": 0.006,
+      "full_price": 7.99
+    },
+    {
+      "row_id": 6,
+      "product_name": "Chocolate Chip Cookies 300g",
+      "product_volume_in_hectoliters": 0.003,
+      "full_price": 4.49
+    },
+    {
+      "row_id": 7,
+      "product_name": "Absolut Vodka 1L",
+      "product_volume_in_hectoliters": 0.01,
+      "full_price": 83.75
+    },
+    {
+      "row_id": 8,
+      "product_name": "Tanqueray Gin 750ml",
+      "product_volume_in_hectoliters": 0.0075,
+      "full_price": 99.99
+    },
+    {
+      "row_id": 9,
+      "product_name": "Jack Daniel's Whiskey 1L",
+      "product_volume_in_hectoliters": 0.01,
+      "full_price": 179.99
+    },
+    {
+      "row_id": 10,
+      "product_name": "Bacardi Rum 980ml",
+      "product_volume_in_hectoliters": 0.0098,
+      "full_price": 48.99
+    },
+    {
+      "row_id": 11,
+      "product_name": "Jack Daniel's Honey 1L",
+      "product_volume_in_hectoliters": 0.01,
+      "full_price": 139.99
+    },
+    {
+      "row_id": 12,
+      "product_name": "Smirnoff Vodka 998ml",
+      "product_volume_in_hectoliters": 0.00998,
+      "full_price": 32.55
+    },
+    {
+      "row_id": 13,
+      "product_name": "Growth Whey Protein Shake 500ml",
+      "product_volume_in_hectoliters": 0.005,
+      "full_price": 9.99
+    },
+    {
+      "row_id": 14,
+      "product_name": "Jägermeister 700ml",
+      "product_volume_in_hectoliters": 0.007,
+      "full_price": 215.99
+    },
+    {
+      "row_id": 15,
+      "product_name": "Lipton Peach Tea 1.5L",
+      "product_volume_in_hectoliters": 0.015,
+      "full_price": 6.99
+    },
+    {
+      "row_id": 16,
+      "product_name": "Monin Tangerine Syrup 700ml",
+      "product_volume_in_hectoliters": 0.007,
+      "full_price": 71.99
+    },
+    {
+      "row_id": 17,
+      "product_name": "Gatorade Lemon 500ml",
+      "product_volume_in_hectoliters": 0.005,
+      "full_price": 4.47
+    },
+    {
+      "row_id": 18,
+      "product_name": "Smirnoff Ice 275ml",
+      "product_volume_in_hectoliters": 0.00275,
+      "full_price": 7.49
+    },
+    {
+      "row_id": 19,
+      "product_name": "Barefoot Malbec Red Wine 750ml",
+      "product_volume_in_hectoliters": 0.0075,
+      "full_price": 49.9
+    },
+    {
+      "row_id": 20,
+      "product_name": "Heineken 600ml",
+      "product_volume_in_hectoliters": 0.006,
+      "full_price": 8.99
+    },
+    {
+      "row_id": 21,
+      "product_name": "Brie Cheese 200g",
+      "product_volume_in_hectoliters": 0.002,
+      "full_price": 12.99
+    },
+    {
+      "row_id": 22,
+      "product_name": "French Baguette 400g",
+      "product_volume_in_hectoliters": 0.004,
+      "full_price": 3.49
+    },
+    {
+      "row_id": 23,
+      "product_name": "Lay's Potato Chips 100g",
+      "product_volume_in_hectoliters": 0.001,
+      "full_price": 4.99
+    },
+    {
+      "row_id": 24,
+      "product_name": "Natural Sandwich 200g",
+      "product_volume_in_hectoliters": 0.002,
+      "full_price": 9.99
+    },
+    {
+      "row_id": 25,
+      "product_name": "Nestlé Chocolate Bar 150g",
+      "product_volume_in_hectoliters": 0.0015,
+      "full_price": 7.99
+    },
+    {
+      "row_id": 26,
+      "product_name": "Planters Roasted Peanuts 200g",
+      "product_volume_in_hectoliters": 0.002,
+      "full_price": 5.49
+    },
+    {
+      "row_id": 27,
+      "product_name": "Oreo Stuffed Biscuit 140g",
+      "product_volume_in_hectoliters": 0.0014,
+      "full_price": 3.99
+    },
+    {
+      "row_id": 28,
+      "product_name": "Evian Mineral Water 500ml",
+      "product_volume_in_hectoliters": 0.005,
+      "full_price": 1.99
+    },
+    {
+      "row_id": 29,
+      "product_name": "Tropicana Orange Juice 1L",
+      "product_volume_in_hectoliters": 0.01,
+      "full_price": 4.99
+    },
+    {
+      "row_id": 30,
+      "product_name": "Cheese Bread 300g",
+      "product_volume_in_hectoliters": 0.003,
+      "full_price": 6.99
+    },
+    {
+      "row_id": 31,
+      "product_name": "Starbucks Espresso Coffee 100ml",
+      "product_volume_in_hectoliters": 0.001,
+      "full_price": 2.5
+    },
+    {
+      "row_id": 32,
+      "product_name": "Nestlé Hot Chocolate 200ml",
+      "product_volume_in_hectoliters": 0.002,
+      "full_price": 3.5
+    },
+    {
+      "row_id": 33,
+      "product_name": "Croissant with Ham and Cheese 150g",
+      "product_volume_in_hectoliters": 0.0015,
+      "full_price": 4.99
+    },
+    {
+      "row_id": 34,
+      "product_name": "Altoids Mint Candy 50g",
+      "product_volume_in_hectoliters": 0.0005,
+      "full_price": 1.5
+    },
+    {
+      "row_id": 35,
+      "product_name": "Nature Valley Whole Grain Biscuit 200g",
+      "product_volume_in_hectoliters": 0.002,
+      "full_price": 5.99
+    },
+    {
+      "row_id": 36,
+      "product_name": "Chobani Natural Yogurt 170g",
+      "product_volume_in_hectoliters": 0.0017,
+      "full_price": 3.49
+    },
+    {
+      "row_id": 37,
+      "product_name": "Dole Fruit Salad 300g",
+      "product_volume_in_hectoliters": 0.003,
+      "full_price": 7.99
+    },
+    {
+      "row_id": 38,
+      "product_name": "Naked Detox Juice 500ml",
+      "product_volume_in_hectoliters": 0.005,
+      "full_price": 8.99
+    },
+    {
+      "row_id": 39,
+      "product_name": "Subway Chicken Sandwich 200g",
+      "product_volume_in_hectoliters": 0.002,
+      "full_price": 9.49
+    },
+    {
+      "row_id": 40,
+      "product_name": "Lindt Milk Chocolate 100g",
+      "product_volume_in_hectoliters": 0.001,
+      "full_price": 4.99
+    },
+    {
+      "row_id": 41,
+      "product_name": "Beef Pastry 150g",
+      "product_volume_in_hectoliters": 0.0015,
+      "full_price": 5.49
+    },
+    {
+      "row_id": 42,
+      "product_name": "Chicken Empanada 120g",
+      "product_volume_in_hectoliters": 0.0012,
+      "full_price": 4.49
+    },
+    {
+      "row_id": 43,
+      "product_name": "Kellogg's Cereal Bar 25g",
+      "product_volume_in_hectoliters": 0.00025,
+      "full_price": 2.49
+    },
+    {
+      "row_id": 44,
+      "product_name": "Yellow Tail Chardonnay White Wine 750ml",
+      "product_volume_in_hectoliters": 0.0075,
+      "full_price": 54.99
+    },
+    {
+      "row_id": 45,
+      "product_name": "Whispering Angel Provence Rosé Wine 750ml",
+      "product_volume_in_hectoliters": 0.0075,
+      "full_price": 59.99
+    }
+  ]
+}

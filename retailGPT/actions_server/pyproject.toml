@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "actions"
+version = "0.1.0"
+description = "Environment for the rasa actions server"
+authors = ["Bruno Freitas <bruno.freitas@neuralmind.ai>"]
+
+[tool.poetry.dependencies]
+python = "^3.10, <3.11"
+openai = "^1.17.1"
+redis = "^5.0.3"
+pydantic = "^2.7.0"
+rasa-sdk = "^3.6.0"
+websockets = "10.0"
+aiohttp = "^3.9.5"
+load-dotenv = "^0.1.0"
+
+[[tool.poetry.source]]
+name = "neuralmind-ai"
+url = "https://pkgs.dev.azure.com/neuralmind-ai/_packaging/neuralmind-ai/pypi/simple/"
+priority = "supplemental"
+
+[tool.poetry.group.dev.dependencies]
+colorama = "^0.4.6"
+pre-commit = "^3.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

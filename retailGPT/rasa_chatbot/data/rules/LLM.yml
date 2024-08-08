@@ -1,0 +1,31 @@
+  version: "3.1"
+
+  rules:
+
+    - rule: Send the message to the LLM anytime the NLU fallback is triggered outside a loop
+      condition:
+        - active_loop: null
+      steps:
+      - intent: nlu_fallback
+      - action: llm_processing
+
+    - rule: Send the message to the LLM anytime the message is in the context of the conversation examples
+      condition:
+        - active_loop: null
+      steps:
+      - intent: conversation
+      - action: llm_processing
+
+    - rule: Send the message to the LLM if the affirm intent is detected outside a form
+      condition:
+        - active_loop: null
+      steps:
+      - intent: affirm
+      - action: llm_processing
+
+    - rule: Send the message to the LLM if the deny intent is detected outside a form
+      condition:
+        - active_loop: null
+      steps:
+      - intent: deny
+      - action: llm_processing

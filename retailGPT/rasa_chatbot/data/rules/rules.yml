@@ -1,0 +1,24 @@
+  version: "3.1"
+
+  rules:
+
+    - rule: Say 'I am a bot' anytime the user challenges
+      condition:
+      - slot_was_set:
+        - zipcode: "set"
+      steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+    - rule: Say 'goodbye' anytime the user says 'goodbye'
+      condition:
+      - slot_was_set:
+        - zipcode: "set"
+      steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+    - rule: Return cart status if the user asks for it
+      steps:
+        - intent: cart_status
+        - action: return_cart_status

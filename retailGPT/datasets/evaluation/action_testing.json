@@ -1,0 +1,654 @@
+{
+  "search_triggering_messages": [
+    "I want to buy beer for 8 people",
+    "I want to drink orange juice",
+    "I feel like having a cold one",
+    "I want a box of cookies",
+    "Do you have any wines to recommend?",
+    "I would like a bottle of aged cachaça.",
+    "I'm looking for South American wines, do you have any Malbec?",
+    "Do you have any snacks?",
+    "I want to have an oreo.",
+    "Do you have any candy?",
+    "I would like a croissant",
+    "Do you guys sell sandwiches?",
+    "I'm looking for rum to make mojito, do you have Bacardi?",
+    "I want to buy a Brazilian sparkling wine for a special occasion.",
+    "Do you have any cheese available?",
+    "What sweet snacks do you have?",
+    "I would like to buy a Coca-Cola.",
+    "I'm looking for breadsticks, do you have any?",
+    "I want a refreshing drink, do you recommend any?",
+    "I'm interested in non-alcoholic beers, what do you have?",
+    "I want a protein shake, do you have any recommendation?",
+    "Do you have any pies for dessert?",
+    "I would like a rosé sparkling wine.",
+    "Do you have Sprite?",
+    "I want chocolate.",
+    "I would like to buy icecream.",
+    "Potato chips sounds like a good idea",
+    "I'm , what do you suggest?",
+    "Do you have any Brazilian dry red wine to recommend?",
+    "I want some roasted peanuts, do you have?"
+  ],
+  "cart_addition_triggering_fluxes": [
+    {
+      "history": [
+        {
+          "user": "I want to buy drinks for 8 people",
+          "assistant": "Sure! For such an occasion, we have Coca-Cola 2L or Pepsi 1L available. Both are popular and usually please most people."
+        }
+      ],
+      "message": "2 bottles of Coca-Cola 2L will do"
+    },
+    {
+      "history": [
+        {
+          "user": "Do you have Absolut Vodka?",
+          "assistant": "Yes, we have Absolut Vodka 1L available. How many bottles would you like?"
+        },
+        {
+          "user": "Just one bottle, please.",
+          "assistant": "Got it. I have added one bottle of Absolut Vodka 1L to your cart."
+        }
+      ],
+      "message": "Add one more, please"
+    },
+    {
+      "history": [
+        {
+          "user": "I want to have a Heineken 600ml",
+          "assistant": "Perfect! How many units?"
+        }
+      ],
+      "message": "4"
+    },
+    {
+      "history": [
+        {
+          "user": "I would like to buy a Jack Daniel's Whiskey 1L.",
+          "assistant": "Great choice! I have added a bottle of Jack Daniel's Whiskey 1L to your cart."
+        }
+      ],
+      "message": "Add one more to the cart"
+    },
+    {
+      "history": [
+        {
+          "user": "I want a 5 cans of Sprite 350ml for the barbecue this weekend.",
+          "assistant": "Excellent choice! I have added 5 cans of Sprite 350ml to your cart."
+        }
+      ],
+      "message": "I want 2 more cans of Sprite 350ml"
+    },
+    {
+      "history": [
+        {
+          "user": "I'm planning a party and need a few bottles of Smirnoff Vodka.",
+          "assistant": "Understood. How many bottles of Smirnoff Vodka would you like to add to your cart?"
+        },
+        {
+          "user": "I think five bottles should be enough.",
+          "assistant": "Perfect! I have added five bottles of Smirnoff Vodka to your cart."
+        }
+      ],
+      "message": "Actually, I think a total of 7 bottles for the party would be better"
+    },
+    {
+      "history": [
+        {
+          "user": "I want a drink to go with the barbecue.",
+          "assistant": "I recommend Budweiser 600ml for that occasion."
+        }
+      ],
+      "message": "Can you add 12 Budweisers 600ml, please?"
+    },
+    {
+      "history": [
+        {
+          "user": "I'm thinking of making a cocktail.",
+          "assistant": "How about trying Bacardi Rum 980ml? It's a good option and we have on stock."
+        }
+      ],
+      "message": "Sure, give me 1 bottle"
+    },
+    {
+      "history": [
+        {
+          "user": "I'm having some friends over, we need more drinks.",
+          "assistant": "How about ensuring a variety? I recommend adding a some bottles of Jägermeister 700ml."
+        }
+      ],
+      "message": "Go ahead, add 1"
+    },
+    {
+      "history": [
+        {
+          "user": "I think a whiskey would be a good choice for the night.",
+          "assistant": "For a quality whiskey, I suggest Jack Daniel's Honey 1L."
+        }
+      ],
+      "message": "I want one"
+    }
+  ],
+  "cart_removal_triggering_fluxes": [
+    {
+      "history": [
+        {
+          "user": "I would like to include a bottle of Tanqueray Gin 750ml in my cart",
+          "assistant": "Sure! A bottle of Tanqueray Gin 750ml has been added to your cart."
+        }
+      ],
+      "message": "I decided I don't want the gin anymore. Can you remove it from the cart, please?"
+    },
+    {
+      "history": [
+        {
+          "user": "Please add two bottles of Yellow Tail Chardonnay White Wine 750ml to the cart",
+          "assistant": "Alright. I have added two bottles of Yellow Tail Chardonnay White Wine 750ml to your cart."
+        }
+      ],
+      "message": "Oh, I forgot I already have wine at home. Better remove it from the cart, please"
+    },
+    {
+      "history": [
+        {
+          "user": "I want to add a bottle of Whispering Angel Provence Rosé Wine 750ml to the cart",
+          "assistant": "Understood. A bottle of Whispering Angel Provence Rosé Wine 750ml has been added to your cart."
+        }
+      ],
+      "message": "Please remove the bottle of Whispering Angel Provence Rosé Wine from my cart"
+    },
+    {
+      "history": [
+        {
+          "user": "Add a bottle of Bacardi Rum 980ml for me",
+          "assistant": "Certainly! A bottle of Bacardi Rum 980ml has been added to your cart."
+        }
+      ],
+      "message": "I changed my mind. Please remove it from the cart"
+    },
+    {
+      "history": [
+        {
+          "user": "Add a few bottles of Coca-Cola 2L, please",
+          "assistant": "Of course! A few bottles of Coca-Cola 2L have been added to your cart."
+        }
+      ],
+      "message": "Ah, sorry, I just remembered I'm out of money. Can you remove them, please?"
+    },
+    {
+      "history": [
+        {
+          "user": "I want to put a bottle of Jägermeister 700ml in my cart",
+          "assistant": "Sure! A bottle of Jägermeister 700ml has been added to your cart."
+        }
+      ],
+      "message": "On second thought, I think I'll leave it for another time. Can you remove it, please?"
+    },
+    {
+      "history": [
+        {
+          "user": "Add a Heineken 600ml for me",
+          "assistant": "Alright. A Heineken 600ml has been added to your cart."
+        }
+      ],
+      "message": "I'd rather not buy the Heineken anymore. Remove it from the cart, please?"
+    },
+    {
+      "history": [
+        {
+          "user": "Can you add a Jack Daniel's Whiskey 1L to my cart?",
+          "assistant": "Of course! A Jack Daniel's Whiskey 1L has been added to your cart."
+        }
+      ],
+      "message": "I changed my mind. Remove the Jack Daniel's Whiskey, please?"
+    },
+    {
+      "history": [
+        {
+          "user": "Add a box of Lay's Potato Chips 100g for me",
+          "assistant": "Understood. A box of Lay's Potato Chips 100g has been added to your cart."
+        }
+      ],
+      "message": "Sorry, I don't want the Lay's Potato Chips anymore. Can you remove it?"
+    },
+    {
+      "history": [
+        {
+          "user": "I want the Lindt Milk Chocolate 100g.",
+          "assistant": "Alright! I have added a bar of Lindt Milk Chocolate 100g to your cart."
+        }
+      ],
+      "message": "Remove 1"
+    }
+  ],
+  "cart_addition_and_search_triggering_fluxes": [
+    {
+      "history": [
+        {
+          "user": "I want to buy drinks for 8 people",
+          "assistant": "Sure! For such an occasion, we have Coca-Cola 2L or Pepsi 1L available. Both are popular and usually please most people."
+        }
+      ],
+      "message": "2 bottles of Coca-Cola 2L will do. I also want to buy beer for 8 people"
+    },
+    {
+      "history": [
+        {
+          "user": "Do you have Absolut Vodka?",
+          "assistant": "Yes, we have Absolut Vodka 1L available. How many bottles would you like?"
+        },
+        {
+          "user": "Just one bottle, please.",
+          "assistant": "Got it. I have added one bottle of Absolut Vodka 1L to your cart."
+        }
+      ],
+      "message": "Add one more, please. I want to drink orange juice too"
+    },
+    {
+      "history": [
+        {
+          "user": "I want to have a Heineken 600ml",
+          "assistant": "Perfect! How many units?"
+        }
+      ],
+      "message": "4. But do you sell boxes of cookies too?"
+    },
+    {
+      "history": [
+        {
+          "user": "I would like to buy a Jack Daniel's Whiskey 1L.",
+          "assistant": "Great choice! I have added a bottle of Jack Daniel's Whiskey 1L to your cart."
+        }
+      ],
+      "message": "Add one more to the cart. I would like a bottle of aged cachaça."
+    },
+    {
+      "history": [
+        {
+          "user": "I want a 5 cans of Sprite 350ml for the barbecue this weekend.",
+          "assistant": "Excellent choice! I have added 5 cans of Sprite 350ml to your cart."
+        }
+      ],
+      "message": "I want 2 more cans of Sprite 350ml. Do you have any wines to recommend?"
+    },
+    {
+      "history": [
+        {
+          "user": "I'm planning a party and need a few bottles of Smirnoff Vodka.",
+          "assistant": "Understood. How many bottles of Smirnoff Vodka would you like to add to your cart?"
+        },
+        {
+          "user": "I think five bottles should be enough.",
+          "assistant": "Perfect! I have added five bottles of Smirnoff Vodka to your cart."
+        }
+      ],
+      "message": "Actually, I think a total of 7 bottles for the party would be better. I'm also looking for South American wines, do you have any Malbec?"
+    },
+    {
+      "history": [
+        {
+          "user": "I want a drink to go with the barbecue.",
+          "assistant": "I recommend Budweiser 600ml for that occasion."
+        }
+      ],
+      "message": "Can you add 12 Budweisers 600ml, please? Also, do you have any snacks?"
+    },
+    {
+      "history": [
+        {
+          "user": "I'm thinking of making a cocktail.",
+          "assistant": "How about trying Bacardi Rum 980ml? It's a good option and we have on stock."
+        }
+      ],
+      "message": "Sure, give me 1 bottle. I also want to have an Oreo."
+    },
+    {
+      "history": [
+        {
+          "user": "I'm having some friends over, we need more drinks.",
+          "assistant": "How about ensuring a variety? I recommend adding some bottles of Jägermeister 700ml."
+        }
+      ],
+      "message": "Go ahead, add 1. Do you have any candy?"
+    },
+    {
+      "history": [
+        {
+          "user": "I think a whiskey would be a good choice for the night.",
+          "assistant": "For a quality whiskey, I suggest Jack Daniel's Honey 1L."
+        }
+      ],
+      "message": "I want one. I would also like a croissant."
+    }
+  ],
+  "cart_removal_and_search_triggering_fluxes": [
+    {
+      "history": [
+        {
+          "user": "I would like to include a bottle of Tanqueray Gin 750ml in my cart",
+          "assistant": "Sure! A bottle of Tanqueray Gin 750ml has been added to your cart."
+        }
+      ],
+      "message": "I decided I don't want the gin anymore. Can you remove it from the cart, please? Besides that, I also want to buy beer for 8 people"
+    },
+    {
+      "history": [
+        {
+          "user": "Please add two bottles of Yellow Tail Chardonnay White Wine 750ml to the cart",
+          "assistant": "Alright. I have added two bottles of Yellow Tail Chardonnay White Wine 750ml to your cart."
+        }
+      ],
+      "message": "Oh, I forgot I already have wine at home. Better remove it from the cart, please. Do you have any cheese available?"
+    },
+    {
+      "history": [
+        {
+          "user": "I want to add a bottle of Whispering Angel Provence Rosé Wine 750ml to the cart",
+          "assistant": "Understood. A bottle of Whispering Angel Provence Rosé Wine 750ml has been added to your cart."
+        }
+      ],
+      "message": "Please remove the bottle of Whispering Angel Provence Rosé Wine from my cart. What sweet snacks do you have?"
+    },
+    {
+      "history": [
+        {
+          "user": "Add a bottle of Bacardi Rum 980ml for me",
+          "assistant": "Certainly! A bottle of Bacardi Rum 980ml has been added to your cart."
+        }
+      ],
+      "message": "I changed my mind. Please remove it from the cart. I would also like to buy a Coca-Cola."
+    },
+    {
+      "history": [
+        {
+          "user": "Add a few bottles of Coca-Cola 2L, please",
+          "assistant": "Of course! A few bottles of Coca-Cola 2L have been added to your cart."
+        }
+      ],
+      "message": "Ah, sorry, I just remembered I'm out of money. Can you remove them, please? I'm looking for breadsticks, do you have any?"
+    },
+    {
+      "history": [
+        {
+          "user": "I want to put a bottle of Jägermeister 700ml in my cart",
+          "assistant": "Sure! A bottle of Jägermeister 700ml has been added to your cart."
+        }
+      ],
+      "message": "On second thought, I think I'll leave it for another time. Can you remove it, please? I want a refreshing drink, do you recommend any?"
+    },
+    {
+      "history": [
+        {
+          "user": "Add a Heineken 600ml for me",
+          "assistant": "Alright. A Heineken 600ml has been added to your cart."
+        }
+      ],
+      "message": "I'd rather not buy the Heineken anymore. Remove it from the cart, please? I'm interested in non-alcoholic beers, what do you have?"
+    },
+    {
+      "history": [
+        {
+          "user": "Can you add a Jack Daniel's Whiskey 1L to my cart?",
+          "assistant": "Of course! A Jack Daniel's Whiskey 1L has been added to your cart."
+        }
+      ],
+      "message": "I changed my mind. Remove the Jack Daniel's Whiskey, please? I want a protein shake, do you have any recommendation?"
+    },
+    {
+      "history": [
+        {
+          "user": "Add a box of Lay's Potato Chips 100g for me",
+          "assistant": "Understood. A box of Lay's Potato Chips 100g has been added to your cart."
+        }
+      ],
+      "message": "Sorry, I don't want the Lay's Potato Chips anymore. Can you remove it? Do you have any pies for dessert?"
+    },
+    {
+      "history": [
+        {
+          "user": "I want the Lindt Milk Chocolate 100g.",
+          "assistant": "Alright! I have added a bar of Lindt Milk Chocolate 100g to your cart."
+        }
+      ],
+      "message": "Remove 1. I would also like a rosé sparkling wine."
+    }
+  ],
+  "null_action_messages": [
+    "My name is João",
+    "Good morning",
+    "Hello, how are you?",
+    "Are you a robot?",
+    "What is your name?",
+    "Is there any special promotion today?",
+    "What is the return policy?",
+    "Do you deliver to my region?",
+    "Is there any discount for bulk purchases?",
+    "Could you inform me about the accepted payment methods?",
+    "Do you have a loyalty program?",
+    "Can I get information about tasting events?",
+    "What is the difference between red wine and white wine?",
+    "Can you explain the difference between ale and lager beer?",
+    "How can I properly store a bottle of gin after opening?",
+    "Is there any general rule for pairing wines with food?",
+    "Can I change the delivery address?",
+    "What is the current delivery address set up?",
+    "Goodbye",
+    "Wow, that's expensive",
+    "I'll think about it and let you know later",
+    "How many items are in my cart?",
+    "What is the volume limit I can take?",
+    "How can I contact customer support?",
+    "What is the delivery time?",
+    "How can I cancel an order?",
+    "I don't want to buy anything now",
+    "I have a question"
+  ],
+  "finish_purchase_triggering_fluxes": [
+    {
+      "history": [
+        {
+          "user": "2 bottles of Coca-Cola 2L will do",
+          "assistant": "Sure! Added to your cart. Anything else?"
+        }
+      ],
+      "message": "No, that's all I need. Let's check out."
+    },
+    {
+      "history": [
+        {
+          "user": "Do you have Absolut Vodka?",
+          "assistant": "Yes, we have Absolut Vodka 1L available. How many bottles would you like?"
+        },
+        {
+          "user": "Just one bottle, please.",
+          "assistant": "Got it. I have added one bottle of Absolut Vodka 1L to your cart."
+        }
+      ],
+      "message": "This is perfect. Let's go ahead and finish the purchase."
+    },
+    {
+      "history": [
+        {
+          "user": "I want to have one Heineken 600ml",
+          "assistant": "Perfect! Added to your cart."
+        }
+      ],
+      "message": "Great, that's everything. I'm ready to pay."
+    },
+    {
+      "history": [
+        {
+          "user": "I would like to buy a Jack Daniel's Whiskey 1L.",
+          "assistant": "Great choice! I have added a bottle of Jack Daniel's Whiskey 1L to your cart. Anything else?"
+        }
+      ],
+      "message": "No, that's all for now. Let's proceed to payment."
+    },
+    {
+      "history": [
+        {
+          "user": "Can you add a pack of Lay's Potato Chips 100g?",
+          "assistant": "Of course! Lay's Potato Chips 100g has been added to your cart. Anything else?"
+        }
+      ],
+      "message": "No, I'm good with that. Let's wrap this up."
+    },
+    {
+      "history": [
+        {
+          "user": "Please add one bottle of Bacardi Rum 980ml",
+          "assistant": "Sure! Bacardi Rum 980ml has been added to your cart. Anything else?"
+        }
+      ],
+      "message": "That should do it. I'm ready to check out."
+    },
+    {
+      "history": [
+        {
+          "user": "I'd like to get one bottle of Yellow Tail Chardonnay White Wine 750ml",
+          "assistant": "Done! I've added Yellow Tail Chardonnay White Wine 750ml to your cart. Would you like anything else?"
+        }
+      ],
+      "message": "No, that covers everything. Let's finish up."
+    },
+    {
+      "history": [
+        {
+          "user": "Add two packs of Oreo Stuffed Biscuit 140g to my cart",
+          "assistant": "Sure! Two packs of Oreo Stuffed Biscuit 140g have been added to your cart. Anything else?"
+        }
+      ],
+      "message": "No, I'm all set. Let's proceed to checkout."
+    },
+    {
+      "history": [
+        {
+          "user": "Can you add a bottle of Lipton Peach Tea 1.5L?",
+          "assistant": "Certainly! Lipton Peach Tea 1.5L has been added to your cart. Anything else?"
+        }
+      ],
+      "message": "That's it for now. I'm ready to complete the purchase."
+    },
+    {
+      "history": [
+        {
+          "user": "Please add a bottle of Jägermeister 700ml",
+          "assistant": "Sure! Jägermeister 700ml has been added to your cart. Anything else?"
+        }
+      ],
+      "message": "No, that's everything I wanted. Let's finalize the order."
+    },
+    {
+      "history": [
+        {
+          "user": "Add a pack of Planters Roasted Peanuts 200g to my cart",
+          "assistant": "Sure! Planters Roasted Peanuts 200g have been added to your cart. Anything else?"
+        }
+      ],
+      "message": "Nope, I'm all set. Let's proceed to checkout."
+    },
+    {
+      "history": [
+        {
+          "user": "Can you add a Growth Whey Protein Shake 500ml?",
+          "assistant": "Certainly! Growth Whey Protein Shake 500ml has been added to your cart. Anything else?"
+        }
+      ],
+      "message": "No, that should do it. I'm ready to finalize the purchase."
+    },
+    {
+      "history": [
+        {
+          "user": "I'd like to add a French Baguette 400g to my order",
+          "assistant": "Sure! French Baguette 400g has been added to your cart. Anything else?"
+        }
+      ],
+      "message": "No, that completes my order. Let's finish up."
+    },
+    {
+      "history": [
+        {
+          "user": "Please add a Subway Chicken Sandwich 200g",
+          "assistant": "Got it! Subway Chicken Sandwich 200g has been added to your cart. Anything else?"
+        }
+      ],
+      "message": "That's all for now. I'm ready to check out."
+    },
+    {
+      "history": [
+        {
+          "user": "Can you add a Tropicana Orange Juice 1L to my cart?",
+          "assistant": "Of course! Tropicana Orange Juice 1L has been added to your cart. Anything else?"
+        }
+      ],
+      "message": "No, I'm ready to finish the purchase."
+    },
+    {
+      "history": [
+        {
+          "user": "I’m planning a dinner and need a bottle of Whispering Angel Provence Rosé Wine 750ml.",
+          "assistant": "Great choice! I’ve added the Whispering Angel Provence Rosé Wine 750ml to your cart."
+        },
+        {
+          "user": "Actually, I’m also thinking of adding some snacks.",
+          "assistant": "How about some Lay’s Potato Chips 100g? It pairs well with the wine."
+        }
+      ],
+      "message": "Thanks. I’m ready to check out."
+    },
+    {
+      "history": [
+        {
+          "user": "I’m organizing a small party and need several types of drinks.",
+          "assistant": "Certainly! What do you have in mind?"
+        },
+        {
+          "user": "I’ll start with Coca-Cola 2L, Heineken 600ml, and a bottle of Bacardi Rum 980ml.",
+          "assistant": "Got it! All three items have been added to your cart. Anything else you need?"
+        }
+      ],
+      "message": "Actually, I might add some snacks later, but for now, this is fine."
+    },
+    {
+      "history": [
+        {
+          "user": "I’m thinking of buying a few bottles of wine. Do you have any recommendations?",
+          "assistant": "Sure! We have a great selection, including Yellow Tail Chardonnay White Wine 750ml and Barefoot Malbec Red Wine 750ml."
+        },
+        {
+          "user": "I'll go with the Barefoot Malbec. Add two bottles, please.",
+          "assistant": "Two bottles of Barefoot Malbec Red Wine 750ml added to your cart."
+        }
+      ],
+      "message": "That’s everything I need for now. Ready to check out."
+    },
+    {
+      "history": [
+        {
+          "user": "I need something refreshing for the weekend.",
+          "assistant": "How about some Gatorade Lemon 500ml? It’s perfect for staying hydrated."
+        },
+        {
+          "user": "That sounds good. Add three bottles.",
+          "assistant": "Three bottles of Gatorade Lemon 500ml added to your cart. Anything else?"
+        }
+      ],
+      "message": "No"
+    },
+    {
+      "history": [
+        {
+          "user": "Can you help me add some breakfast items to my cart?",
+          "assistant": "Of course! I recommend adding Nature Valley Whole Grain Biscuits 200g and Chobani Natural Yogurt 170g."
+        },
+        {
+          "user": "That sounds good. Add both, please.",
+          "assistant": "Both items have been added to your cart. Anything else you need?"
+        }
+      ],
+      "message": "No, that’s everything. I’m ready to finalize the purchase."
+    }
+  ]
+}

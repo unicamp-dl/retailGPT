@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "rasa_chatbot"
+version = "0.1.0"
+description = "Rasa bot environment"
+authors = ["Bruno Freitas <bruno.freitas@neuralmind.ai>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+rasa = "^3.6.19"
+spacy = "^3.7.4"
+psycopg2-binary = "^2.9.9"
+openai = "^1.13.3"
+redis = "4.5.3"
+python-dotenv = "^1.0.1"
+colorama = "^0.4.6"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.6.2"
+pytest = "^8.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

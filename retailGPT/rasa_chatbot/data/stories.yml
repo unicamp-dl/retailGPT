@@ -1,0 +1,143 @@
+version: "3.1"
+
+stories:
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: zipcode_form
+  - active_loop: zipcode_form
+  - slot_was_set:
+    - requested_slot: legal_age
+  - intent: affirm
+  - slot_was_set:
+    - legal_age: true
+  - action: zipcode_form
+  - slot_was_set:
+    - legal_age: true
+  - slot_was_set:
+    - requested_slot: zipcode
+  - intent: inform_zipcode
+    entities:
+    - zipcode: '12345678'
+  - slot_was_set:
+    - zipcode: '12345678'
+  - action: zipcode_form
+  - slot_was_set:
+    - zipcode: '12345678'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: process_cached_user_demands
+  - intent: conversation
+  - action: llm_processing
+  - intent: nlu_fallback
+  - action: llm_processing
+  - intent: finish_purchase
+  - action: payment_method_form
+  - active_loop: payment_method_form
+  - slot_was_set:
+    - requested_slot: payment_method
+  - intent: inform
+    entities:
+    - payment_method: credit
+  - slot_was_set:
+    - payment_method: credit
+  - action: payment_method_form
+  - slot_was_set:
+    - payment_method: credit
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: summarize_details
+  - action: confirmation_form
+  - active_loop: confirmation_form
+  - slot_was_set:
+    - requested_slot: modify_details
+  - intent: inform
+    entities:
+    - modify_details: zipcode
+  - slot_was_set:
+    - modify_details: zipcode
+  - action: confirmation_form
+  - slot_was_set:
+    - modify_details: zipcode
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: correct_detail
+  - slot_was_set:
+    - modify_details: null
+  - slot_was_set:
+    - zipcode: null
+  - active_loop: zipcode_form
+  - action: zipcode_form
+  - slot_was_set:
+    - requested_slot: zipcode
+  - intent: inform_zipcode
+    entities:
+    - zipcode: '87654321'
+  - slot_was_set:
+    - zipcode: '87654321'
+  - action: zipcode_form
+  - slot_was_set:
+    - zipcode: '87654321'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: payment_method_form
+  - active_loop: payment_method_form
+  - slot_was_set:
+    - payment_method: credit
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: summarize_details
+  - action: confirmation_form
+  - active_loop: confirmation_form
+  - slot_was_set:
+    - requested_slot: modify_details
+  - intent: inform
+    entities:
+    - modify_details: cart
+  - slot_was_set:
+    - modify_details: cart
+  - action: confirmation_form
+  - slot_was_set:
+    - modify_details: cart
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: correct_detail
+  - slot_was_set:
+    - modify_details: null
+  - intent: nlu_fallback
+  - action: llm_processing
+  - intent: finish_purchase
+  - action: payment_method_form
+  - active_loop: payment_method_form
+  - slot_was_set:
+    - payment_method: credit
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: summarize_details
+  - action: confirmation_form
+  - active_loop: confirmation_form
+  - slot_was_set:
+    - requested_slot: modify_details
+  - intent: inform
+    entities:
+    - modify_details: ok
+  - slot_was_set:
+    - modify_details: ok
+  - action: confirmation_form
+  - slot_was_set:
+    - modify_details: ok
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: correct_detail
+  - slot_was_set:
+    - modify_details: null

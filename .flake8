@@ -1,0 +1,7 @@
+[flake8]
+# B950 and E501: Black deals with line-length like flake8-bugbear
+# E203: Black deals with whitespace around operators
+# B008 was disabled to allow usage of Fast-API's Depends for dependency injection
+select = C,E,F,W,B,B950
+max-line-length = 150
+extend-ignore = E203, E501, B008, E402, W503, W605

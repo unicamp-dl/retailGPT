@@ -1,0 +1,52 @@
+{
+  "purchase_histories": [
+    [
+      {
+        "product_name": "Whisky Jack Daniels 1L",
+        "number_of_units": 1,
+        "date_of_purchase": "Yesterday"
+      },
+      {
+        "product_name": "Stuffed Biscuit 140g",
+        "number_of_units": 1,
+        "date_of_purchase": "Last month"
+      }
+    ],
+    [
+      {
+        "product_name": "Novecento Malbec Red Wine 750ml",
+        "number_of_units": 2,
+        "date_of_purchase": "Last month"
+      }
+    ],
+    [
+      {
+        "product_name": "Mineral Water 500ml",
+        "number_of_units": 5,
+        "date_of_purchase": "Yesterday"
+      },
+      {
+        "product_name": "Smirnoff Ice 275ml",
+        "number_of_units": 2,
+        "date_of_purchase": "10 days ago"
+      }
+    ],
+    [
+      {
+        "product_name": "Budweiser 600ml",
+        "number_of_units": 4,
+        "date_of_purchase": "Yesterday"
+      },
+      {
+        "product_name": "Gin Tanqueray 750ml",
+        "number_of_units": 2,
+        "date_of_purchase": "Yesterday"
+      },
+      {
+        "product_name": "Vodka Absolut Original 1L",
+        "number_of_units": 1,
+        "date_of_purchase": "Last week"
+      }
+    ]
+  ]
+}

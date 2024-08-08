@@ -1,0 +1,168 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - Hi
+    - hey
+    - good morning
+    - good afternoon
+    - good evening
+    - how are you
+    - how's it going
+    - how do you do
+    - how are you doing
+    - how's everything
+    - what's up
+    - hello there
+    - hi there
+    - hey there
+    - hiya
+    - greetings
+    - hey buddy
+    - wassup
+    - yo
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - see you soon
+    - take care
+    - bye-bye
+    - see you
+    - talk to you later
+    - catch you later
+    - later
+    - ciao
+    - farewell
+    - peace out
+    - adios
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a robot?
+    - are you a human?
+    - are you a person?
+    - are you a machine?
+    - are you real?
+    - are you a real person?
+    - are you a real human?
+    - are you a chatbot?
+    - is this a bot?
+    - is this a robot?
+    - is this a real person?
+    - are you a living being?
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - yep
+    - absolutely
+    - definitely
+    - of course
+    - sure
+    - yup
+    - yes, I am over legal age
+    - yes, I am an adult
+    - yes, I am more than 18 years old
+    - I am of legal age
+    - I am over 18
+    - I am over 21
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - nah
+    - no way
+    - not at all
+    - I am under 18 years old
+    - I am under 21 years old
+    - no, I am a minor
+- intent: inform_zipcode
+  examples: |
+    - My ZIP code is [12345-678](zipcode)
+    - My ZIP code is [12345678](zipcode)
+    - My ZIP code is [12345- 678](zipcode)
+    - [12345-678](zipcode)
+    - [12345678](zipcode)
+    - [87654321](zipcode)
+- intent: conversation
+  examples: |
+    - I want beer
+    - I want to buy beer
+    - I want to buy a drink
+    - How can I place an order?
+    - How do I buy beer?
+    - What products do you sell?
+    - What are the available products?
+    - How much is the beer?
+    - What are the options?
+    - Add Skol to the cart
+    - I want to buy Brahma
+    - 5 units
+    - 5 beers
+    - Make a delivery
+    - Place an order
+    - Purchase products
+    - Please add to the cart
+    - I want to see my cart
+    - How much is it?
+    - How to buy
+    - Place an order
+    - remove one
+    - add two more of this
+    - please add a vodka
+    - clear the cart
+    - empty the cart
+    - remove the beer
+    - I don't want this Corona anymore
+    - add more vodka
+    - what beer brands do you have
+    - what kind of liquor do you have
+    - I want a snack
+    - I want to buy a snack
+    - Do you have meat?
+    - I need ice
+    - What products do you sell?
+- intent: inform
+  examples: |
+    - [cash](payment_method)
+    - [credit card](payment_method)
+    - [debit card](payment_method)
+    - I want to pay with [cash](payment_method)
+- intent: finish_purchase
+  examples: |
+    - Okay, this is what I want to buy
+    - You can finalize
+    - You can close the order
+    - I confirm the purchase
+    - I would like to finalize the order
+    - Finalize order
+    - Close purchase
+    - This is all I want to buy
+    - Finalize purchase
+- intent: cart_status
+  examples: |
+    - I want to see my cart
+    - I want to see what's in the cart
+    - I want to see the cart
+    - How is my cart
+    - Show me the cart
+    - Show my cart
+    - What's in the cart currently
+    - What products are in the cart
+    - What products are in the shopping cart
+    - What products are in the cart currently
+    - What is in the cart
+    - What's in my shopping bag
+    - What's in my bag
+    - What's in the bag
+    - I want the cart status
+    - Return my cart
+- regex: zipcode
+  examples: |
+    - \b[0-9]{5}-[0-9]{3}\b
+    - \b[0-9]{5}[- ]?[0-9]{3}\b
+    - \b[0-9]{8}\b

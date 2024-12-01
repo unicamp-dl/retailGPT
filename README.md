@@ -74,12 +74,6 @@ In ```retailGPT/rasa_chatbot/endpoints.tml```: Change "localhost" to "actions"
 
 In ```retailGPT/actions_server/src/LLMChatbot/services/chatbot.py```: Change "localhost" to "database"
 
-## Deploying in Production
-
-To deploy the bot in an Virtual Machine, you can use a Nginx server as a reverse proxy to route the requests to the correct container and validate the SSL certificate. The Nginx configuration file is located at `/etc/nginx/sites-available/default`. In this file, we map the default port 80 to the Streamlit app running on port 8501. Besides that, we also map the Streamlit app `/_stcore/stream` endpoint to the corresponding location on the machine. This is necessary for the Streamlit app to work properly.
-
-For the generation and renewal of the SSL certificate, we recommend using [Certbot](https://certbot.eff.org/).
-
 ## Code Architecture
 
 If this is your first time working on this repository, you will probably need to get familiar with the files and directories listed below. Please note that not all the project's files are listed, only the most important ones.
